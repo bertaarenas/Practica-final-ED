@@ -31,8 +31,23 @@ public class Main {
         }
         else if (opcion == 3) {
 
+            System.out.println("Bienvenido al conversor de temperatura, a continuacion introduzca la temperatura deseada en celsius: ");
+
+            float celsius = sc.nextFloat();
+
+            float kelvins = celsius + 273.15f;
+            float fahrenheit = celsius * 1.8f + 32;
+
+            System.out.println("Fahrenheit: "+ fahrenheit);
+            System.out.println("Kelvin: " + kelvins);
+
+
         }
         else if (opcion == 4) {
+
+            System.out.println("Bienvenido al contador de palabras i caracteres, a continuación introduzca una cadena de texto:");
+
+
 
         }
         else if (opcion == 5) {
