@@ -16,52 +16,85 @@ public class Main {
 
         System.out.println("Has escogido la opción " + opcion+".");
 
-        if (opcion == 1) {
+        // Calculadora
+
+        switch (opcion) {
+            case 1:
+                System.out.println("Bienvenido a la calculadora.");
+
+                double resultado = 0;
+
+                System.out.print("Ingresa el primer número: ");
+                double num1 = sc.nextDouble();
+
+                System.out.print("Ingresa el operador (+, -, *, /): ");
+                char operador = sc.next().charAt(0);
+
+                System.out.print("Ingresa el segundo número a operar: ");
+                double num2 = sc.nextDouble();
+
+                if (operador == '+') {
+                    resultado = num1 + num2;
+                    System.out.println("Resultado: " + resultado);
+                } else if (operador == '-') {
+                    resultado = num1 - num2;
+                    System.out.println("Resultado: " + resultado);
+                } else if (operador == '*') {
+                    resultado = num1 * num2;
+                    System.out.println("Resultado: " + resultado);
+                } else if (operador == '/') {
+                    if (num2 != 0) {
+                        resultado = num1 / num2;
+                        System.out.println("Resultado: " + resultado);
+                    } else {
+                        System.out.println("Error: no se puede dividir entre cero.");
+                    }
+                } else {
+                    System.out.println("Operador no válido.");
+                }
+            // Calculador de edad
+            case 2:
+
+                System.out.println("Bienvenido al calculador de edad, a continuación introduzca su año de nacimiento:");
+
+                int anoNacimiento = sc.nextInt();
+                int operacionEdad = 2025 - anoNacimiento;
+
+                System.out.println("Su año de nacimiento es " + anoNacimiento + " y su edad es " + operacionEdad + ".");
+
+
+            // Conversor de temperatura
+            case 3:
+
+                System.out.println("Bienvenido al conversor de temperatura, a continuacion introduzca la temperatura deseada en celsius: ");
+
+                float celsius = sc.nextFloat();
+
+                float kelvins = celsius + 273.15f;
+                float fahrenheit = celsius * 1.8f + 32;
+
+                System.out.println("Fahrenheit: " + fahrenheit);
+                System.out.println("Kelvin: " + kelvins);
+
+
+
+            // Contador de palabras
+            case 4:
+
+                System.out.println("Bienvenido al contador de palabras i caracteres, a continuación introduzca una cadena de texto:");
+
+                String cadenaTexto = sc.nextLine();
+
+
+
+            // Generador de saludos
+            case 5:
+
+
 
         }
-        else if (opcion == 2) {
-
-            System.out.println("Bienvenido al calculador de edad, a continuación introduzca su año de nacimiento:");
-
-            int anoNacimiento = sc.nextInt();
-            int operacionEdad = 2025 - anoNacimiento;
-
-            System.out.println("Su año de nacimiento es " + anoNacimiento + " y su edad es " + operacionEdad + ".");
-
-        }
-        else if (opcion == 3) {
-
-            System.out.println("Bienvenido al conversor de temperatura, a continuacion introduzca la temperatura deseada en celsius:");
-
-            float celsius = sc.nextFloat();
-
-            float kelvins = celsius + 273.15f;
-            float fahrenheit = celsius * 1.8f + 32;
-
-            System.out.println("Fahrenheit: "+ fahrenheit);
-            System.out.println("Kelvin: " + kelvins);
 
 
-        }
-        else if (opcion == 4) {
-
-            System.out.println("Bienvenido al contador de palabras i caracteres, a continuación introduzca una cadena de texto:");
-
-
-
-        }
-        else if (opcion == 5) {
-
-        }
-        else {
-            System.out.println("Has escogido una opción incorrecta.");
-        }
-
-
-
-
-
-        // Calculador de edad
 
     }
 }
