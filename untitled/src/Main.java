@@ -90,6 +90,31 @@ public class Main {
             // Generador de saludos
             case 5:
 
+                System.out.println("Bienvenido al generador de saludos.");
+
+                System.out.println("1) ¡Hola, [Nombre]! Bienvenido/a");
+                System.out.println("2) ¡Buenas, [Nombre]! ¿Cómo andas?");
+                System.out.println("3) Estimado/a [Nombre], espero que se encuentre muy bien.");
+
+                System.out.println("A continuación introduzca su nombre y escoja entre uno de estos tres saludos. (Marque un número del 1 al 3)");
+
+                String nombre = sc.next();
+                int respuesta = sc.nextInt();
+
+
+                if (respuesta == 1) {
+                    System.out.println("¡Hola, " + nombre + "! Bienvenido/a.");
+                }
+                else if (respuesta == 2) {
+                    System.out.println("¡Buenas, " + nombre + "! ¿Cómo andas?");
+                }
+                else if (respuesta == 3) {
+                    System.out.println("Estimado/a " + nombre + ", espero que se encuentre muy bien.");
+                }
+                else {
+                    System.out.println("Error");
+                }
+
 
 
         }
