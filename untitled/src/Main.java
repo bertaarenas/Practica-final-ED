@@ -21,6 +21,13 @@ public class Main {
         }
         else if (opcion == 2) {
 
+            System.out.println("Bienvenido al calculador de edad, a continuación introduzca su año de nacimiento:");
+
+            int anoNacimiento = sc.nextInt();
+            int operacionEdad = 2025 - anoNacimiento;
+
+            System.out.println("Su año de nacimiento es " + anoNacimiento + " y su edad es " + operacionEdad + ".");
+
         }
         else if (opcion == 3) {
 
