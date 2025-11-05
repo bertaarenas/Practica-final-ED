@@ -92,16 +92,30 @@ public class Main {
 
 
 
-            // Contador de palabras
+            // clasicacion de numeros 
             case 4:
 
-                System.out.println("Bienvenido al contador de palabras i caracteres, a continuación introduzca una cadena de texto:");
+               System.out.print("Introduce un número a clasificar: ");
+                
+                int numero = scanner.nextInt();
+                
+                if (numero % 2 == 0) {
+                    System.out.println("El número introducido es par.");
+                } else {
+                    System.out.println("El número es introducido impar.");
+                }
+                
+                if (numero > 0) {
+                    System.out.println("El número introducido es positivo.");
+                } else if (numero < 0) {
+                    System.out.println("El número introducido es negativo.");
+                } else {
+                    System.out.println("El número introducido es cero.");
+                };
 
-                String cadenaTexto = sc.nextLine();
 
 
-
-            // Generador de saludos
+            
             case 5:
 
                 System.out.println("Bienvenido al generador de saludos.");
