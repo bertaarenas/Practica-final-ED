@@ -66,15 +66,29 @@ public class Main {
             // Conversor de temperatura
             case 3:
 
-                System.out.println("Bienvenido al conversor de temperatura, a continuacion introduzca la temperatura deseada en celsius: ");
+               System.out.println("elije estas alguna de estas dos opciones");
+        System.out.println("1. pasar de farenheit a celcius");
+        System.out.println("2. pasar de celcius a farenheit");
 
-                float celsius = sc.nextFloat();
+        int opcion = sc.nextInt();
 
-                float kelvins = celsius + 273.15f;
-                float fahrenheit = celsius * 1.8f + 32;
+        float  celcius, farenheint, resultado1, resultado2 ;
 
-                System.out.println("Fahrenheit: " + fahrenheit);
-                System.out.println("Kelvin: " + kelvins);
+        System.out.println("introduszca temperatua ha calcula ");
+
+        if (opcion == 1){
+            farenheint = sc.nextInt();
+            resultado1 = (farenheint -32) * 0.56f ;
+            System.out.println(farenheint+" farenhint es igual a "+ resultado1+ " celcius");
+        }
+        else if (opcion == 2) {
+            celcius = sc.nextInt();
+            resultado2 = (celcius*9/5) + 32 ;
+            System.out.println(celcius+" celcius es igaul a "+ resultado2 +" farenheint");
+        }
+        else {
+            System.out.println("Opcion invalida");
+        }
 
 
 
