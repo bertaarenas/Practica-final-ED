@@ -85,7 +85,7 @@ public class Primero {
                     
                     System.out.print("Introduce tu nombre: ");
                     String nombre = sc.nextLine();
-                    System.out.println("¡Hola, " + nombre + "! Espero que tengas un excelente día 😊");
+                    System.out.println("¡Hola, " + nombre + "! Espero que tengas un excelente día");
                     break;
 
                 case 0:
