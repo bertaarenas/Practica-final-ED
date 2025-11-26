@@ -1,12 +1,13 @@
 import java.util.Scanner;
 
-public class Primero {
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int opcion;
         char continuar;
 
-        do {
+        do { // Bucle para repetir el programa
+            // Aqui tenemos el menu principal con opciones del 0 al 5
             System.out.println("\n=== MENÚ PRINCIPAL ===");
             System.out.println("1) Calculadora");
             System.out.println("2) Calculador de edad");
@@ -15,21 +16,22 @@ public class Primero {
             System.out.println("5) Generador de saludos");
             System.out.println("0) Salir");
             System.out.print("Introduce una opción del 0 al 5: ");
+            
 
-            opcion = sc.nextInt();
-            sc.nextLine(); // 
+            opcion = sc.nextInt(); // escogemos en que programa queremos empezar
+            sc.nextLine(); 
 
             System.out.println("\nHas escogido la opción " + opcion + ".");
 
             switch (opcion) {
-                case 1:
+                case 1: // calculadora 
 
                     double resultado = 0;
 
                     System.out.print("Ingresa el primer número: ");
                     double num1 = sc.nextDouble();
 
-                    System.out.print("Ingresa el operador (+, -, *, /): ");
+                    System.out.print("Ingresa el operador (+, -, *, /): "); // escoges la operacion
                     char operador = sc.next().charAt(0);
 
                     System.out.print("Ingresa el segundo número: ");
@@ -52,16 +54,16 @@ public class Primero {
                     System.out.println("Resultado: " + resultado);
                     break;
 
-                case 2:
-                    
-                    System.out.print("Introduce tu año de nacimiento: ");
+                case 2: // Calculador de edad
+
+                    System.out.print("Introduce tu año de nacimiento: "); 
                     int anoNacimiento = sc.nextInt();
-                    int edad = 2025 - anoNacimiento;
+                    int edad = 2025 - anoNacimiento; 
                     System.out.println("Tu edad es: " + edad + " años.");
                     break;
 
-                case 3:
-                    
+                case 3: // Conversor de temperatura
+
                     System.out.print("Introduce la temperatura en Celsius: ");
                     float celsius = sc.nextFloat();
                     float kelvin = celsius + 273.15f;
@@ -70,8 +72,8 @@ public class Primero {
                     System.out.println("Kelvin: " + kelvin);
                     break;
 
-                case 4:
-                    
+                case 4: // Generador de saludos
+
                     System.out.println("Introduce una cadena de texto:");
                     String texto = sc.nextLine();
                     int numCaracteres = texto.length();
@@ -81,26 +83,26 @@ public class Primero {
                     System.out.println("Número de palabras: " + numPalabras);
                     break;
 
-                case 5:
-                    
+                case 5: // Generador de saludo
+
                     System.out.print("Introduce tu nombre: ");
                     String nombre = sc.nextLine();
                     System.out.println("¡Hola, " + nombre + "! Espero que tengas un excelente día");
                     break;
 
-                case 0:
+                case 0: //Salir del programa
                     System.out.println("Saliendo del programa... ¡Hasta luego!");
                     sc.close();
                     return;
 
-                default:
+                default: //Por si has escogido alguna opción incorrecta
                     System.out.println("Has escogido una opción incorrecta. Intenta nuevamente.");
             }
 
-            
-            System.out.print("\n¿Deseas volver al menú? (S/N): ");
+
+            System.out.print("\n¿Deseas volver al menú? (S/N): "); 
             continuar = sc.next().charAt(0);
-            sc.nextLine(); 
+            sc.nextLine();
 
         } while (continuar == 'S' || continuar == 's');
 
